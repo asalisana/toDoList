@@ -1,0 +1,264 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+input, button,
+textarea, select {
+    font: inherit;
+}
+textarea:not([rows]) {
+    min-height: 10em;
+}
+:target {
+    scroll-margin-block: 5ex;
+}
+
+body{
+    width: 100%;
+    font-size: 16px;
+    background-color: rgb(238, 238, 238);
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header{
+    display: flex;
+    border-bottom: 0.125rem dashed rgb(220, 220, 220);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    font-size: 3.5rem;
+    padding: 2rem;
+}
+
+.header .filter{
+    margin-top: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .filter:nth-last-child(1){
+    margin-right: 2rem;
+}
+
+.header .filter .filter__button{
+    padding: 0.5rem;
+    width: 8.25rem;
+    height: 3.38rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    background: rgb(233, 233, 233);
+    font-size: 1.5rem;
+}
+
+.header .filter .filter__button:hover{
+    background: rgb(164, 164, 164);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+section{
+    display: block;
+    margin: 3.125rem auto;
+    max-width: 62.5rem;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0rem 0.25rem 2rem 0rem rgba(0, 0, 0, 0.08);
+}
+
+section .list .list__container{
+    min-height: 500px;
+}
+
+section .list .list__container #todoList li{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    padding: 1rem 0rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    height: 4.5rem;
+    z-index: 2;
+}
+
+section .list .list__container #todoList li div{
+    margin-left: 2rem;
+    z-index: 1;
+}
+
+section .list .list__container #todoList li:hover div{
+    opacity: 0.4;
+}
+
+
+section .list .list__input {
+    width: 100%;
+    border-top: 0.125rem dashed rgb(220, 220, 220);
+}
+
+section .list .list__input #newTaskInput{
+    width: 37.06rem;
+    height: 5.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    color: rgb(183, 188, 191);
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+section .list .list__input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .list .list__input #newTaskInput:focus{
+    border: none;
+    outline: none;
+    color: black;
+}
+
+section .list .list__button{
+    cursor: pointer;
+    width: 9.94rem;
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 3rem;
+    background: rgb(238, 136, 154);
+    margin-right: 24px;
+}
+
+section .list .list__button:hover{
+    background: rgb(164, 96, 108);
+}
+
+section .list .list__button a{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    width: 100%;
+    height: calc(100% + 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .list .list__button a:hover{
+    opacity: 0.4;
+}
+
+.header .filter .filter__button:hover,
+.header .filter .filter__button:focus {
+    background: rgb(164, 164, 164);
+    color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section .list .list__container #todoList li:hover div,
+section .list .list__container #todoList li:focus div {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+section .list .list__input #newTaskInput:focus {
+    border: none;
+    outline: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+section .list .list__button:hover,
+section .list .list__button:focus {
+    background: rgb(164, 96, 108);
+    transition: background-color 0.3s ease;
+}
+
+section .list .list__button a:hover {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+#errorMessage{
+    color: red;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Добавление стиля для зачеркивания текста при выполнении задачи */
+section .list .list__container #todoList li.completed {
+    text-decoration: line-through;
+}
+
+section .list .list__container #todoList .completed{
+    position: relative;
+}
+
+/* Определение псевдоэлемента ::before для элемента li */
+section .list .list__container #todoList .completed::before {
+    content: '';
+    display: block;
+    width: 2.31rem;
+    height: 1.44rem;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+

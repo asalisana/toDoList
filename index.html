@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <h1>My To-do list</h1>
+            <div class="filter">
+                <button class="filter__button" data-filter="all">
+                    Show all
+                </button>
+            </div>
+            <div class="filter">
+                <button class="filter__button" data-filter="completed">
+                    Show done
+                </button>
+            </div>
+            <div class="filter">
+                <button class="filter__button" data-filter="not-completed">
+                    Show to-do
+                </button>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list__container">
+                <ul id="todoList"></ul>
+                <div id="errorMessage"></div>
+            </div>
+            <div class="list__input">
+                <input id="newTaskInput" type="text" class="input" placeholder="Type your list here..."></input>
+                <div class="list__button">
+                    <a class="button">Add item</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./src/script.js"></script>
+</body>
+</html>
